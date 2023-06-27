@@ -1,0 +1,1236 @@
+/* Start Global css */
+:root { 
+	--color-main: #0075ff;
+	--color-alt-main: #0d69d5;
+	--color-bg: #888;
+	--color-alt-bg: #f6f6f6;
+	--color-bg2: #f0f4f8;
+	--color-green: #22c55e;
+	--color-red: #f44336;
+	--color-orange: #f59e0b;
+	--transition-main: 0.3s;
+	--font-awesome: "Font Awesome 6 Free";
+}
+
+.bg-orange {background-color: var(--color-orange);}
+.bg-orange-trans {background-color: #f59e0b80 ;}
+
+.bg-main {background-color: var(--color-main);}
+.bg-main-trans {background-color: #0075ff33;}
+
+.bg-green {background-color: var(--color-green);}
+.bg-green-trans {background-color:  #22c55e63;}
+
+.bg-red {background-color: var(--color-red);}
+
+* {
+  box-sizing: border-box;
+}
+
+ul , li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+input	{
+	outline: none;
+	border: none;
+}
+
+textarea {
+	resize: none;
+	border: none;
+	font-family: inherit;
+	outline: none;
+	appearance: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input[type="text"],
+textarea {
+	background-color: var(--color-alt-bg);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 6px;
+
+}
+
+.full-screen {
+	Display:flex;
+	min-height: 100vh;
+	background-color: var(--color-bg2);
+	width: 100%;
+}
+
+.page {
+	width: calc(100% - 250px);
+	background-color: var(--color-bg2);
+}
+
+@media (max-width: 767px) {
+	.page {
+		width: calc(100% - 62px);
+	}
+}
+
+.card {
+	background-color: white;
+	border-radius: 15px;
+	min-height: 325px;
+	position: relative;	
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	gap: 15px;
+}
+
+@media (max-width: 767px) {
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 15px;
+	}
+}
+
+.profile {
+ 	width: 30px;
+ 	height: 30px;
+ 	border-radius: 50%;
+ 	position: relative;
+ 	overflow: hidden;
+ 	display: flex;
+ 	align-items: center;
+ 	margin: auto 10px;
+ }
+
+.profile img {
+ 	width: 35px;
+ }
+
+h1 {
+	position: relative;
+	margin-bottom: 50px;
+}
+
+h1::before {
+	content: "";
+	width: 40px;
+	height: 3px;
+	bottom: -10px;
+	left: 0px;
+	position: absolute;
+	background-color: black;
+}
+
+h1::after {
+	content: "";
+	width: 120px;
+	height: 3px;
+	bottom: -10px;
+	left: 50px;
+	position: absolute;
+	background-color: white;
+}
+
+h2 { 
+	margin:0px;
+	padding	: 10px 20px 0px;
+}
+/* End Global Css */
+
+/* Start Sidebar */	
+.sidebar {
+	width: 250px;
+	background-color: white;
+	position: relative;
+	display: block;
+	box-shadow: 6px 2px 5px -4px #888;
+	z-index: 1;
+}
+
+.sidebar .logo {
+	font-size: 20px;
+	font-weight: bold;
+	align-content: center;
+	text-align: center;
+	padding: 20px 0px;
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.sidebar .logo::after {
+	content: "";
+	width: 100px;
+	height: 2px;
+	position: absolute;
+	background-color: black;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.sidebar .logo::before { 
+	content: "";
+	width: 13px;
+	height: 13px;
+	background-color: black;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 4px solid  White;
+	border-radius: 50%;
+	z-index: 1;
+ }
+
+.sidebar ul li {
+	margin: 20px;
+}
+
+.sidebar a {
+	color: var(--color-bg);
+	display: flex;
+	margin: 10px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+	text-decoration: none;
+	align-items: center;
+}
+
+.sidebar a i {
+	margin: 15px 10px 15px 10px;
+	width: 20px;
+	text-align: center;
+}
+
+.sidebar .row.active {
+	background-color: var(--color-alt-bg);
+}
+
+.sidebar .row:hover {
+	background-color: var(--color-alt-bg);
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 62px;
+  }
+  .sidebar .logo::before,  .sidebar .logo::after   {
+ 	display: none;
+  }
+  .sidebar .logo { 
+  	font-size: 9px;
+  	margin-bottom: 20px;
+   }
+   .sidebar .row {
+   	margin: 0px;
+	text-align: center;
+	justify-content: center;
+   }
+   .sidebar .row span {
+   	display: none;
+   }  
+}
+/* End Sidebar */	
+
+/* Start Navigation Bar */
+.navbar {
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	padding: 10px 10px 10px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0px 4px 3px -2px #888;
+}
+
+.navbar .search {
+	position: relative;
+}
+
+.navbar .search::before {
+	font-family: var(--font-awesome);
+	content: "\f002";
+	font-weight: 900;
+	position: absolute;
+	left: 30px;
+	transform: translateY(50%);
+	color: var(--color-bg);
+	z-index: 1;
+}
+
+.navbar .search input {
+	margin-left: 20px;
+	border-radius: 5px;
+	border-color: transparent;
+	height: 35px;
+	width: 150px;
+	padding-left: 30px;
+	font-size: 13px;
+	border: solid 1px var(--color-bg);
+	position: relative;
+	transition: var(--transition-main);
+}
+
+.navbar .search input:hover { 
+	width: 160px ;
+ }
+
+.navbar .right {
+	display: flex;
+	align-items: center;
+	align-content: flex-end;
+}
+
+.navbar .right i { 
+	color: var(--color-bg);
+	position: relative;
+	font-size: 20px;
+ }
+
+.navbar .right i::after {
+ 	content: "";
+ 	width: 7px;
+ 	height: 7px;
+ 	border-radius: 50%;
+ 	background-color: var(--color-red);
+ 	position: absolute;
+ 	top:-5px;
+ 	right: -2px;
+ }
+/* End Navigation Bar */
+
+/*Start Dashboard Welcome Widget */
+.dashboard {
+	margin: 25px;
+	position: relative;
+}
+
+.dashboard .container .box {
+	background-color: var(--color-alt-bg);
+	display: flex;
+	justify-content: space-between;
+}
+
+.dashboard .container .card .box img {
+	height: 120px;
+	display: inline;
+}
+
+.dashboard .container .card .box2 {
+	margin-top: 50px;
+	border-top: solid 2px var(--color-alt-bg);
+	border-bottom: solid 2px var(--color-alt-bg);
+	text-align: center;
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.dashboard .container .card .box2 .title {
+	font-size: 14px;
+	font-weight: 500;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.dashboard .container .card .box2 .profile { 
+  	top: -90px;
+  	left: 10px;  	
+  	width: 60px;
+  	height: 60px;
+  	background-color: white;
+  	border: solid 3px var(--color-alt-bg);
+}
+
+.dashboard .container .card .box2 .profile img { 
+   	width: 50px;
+}
+
+.dashboard .container .card .text { 
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.dashboard .container .card textarea[name=thoughts] {
+	min-height: 115px; 
+	top: 10px;
+}
+
+ .dashboard .container .card .shapes { 
+ 	padding: 5px 20px;
+ 	position: relative;
+ 	display: flex;
+ 	gap: 20px;
+ 	align-items: center;
+}
+
+.dashboard .container .card .shapes .dollar { 
+ 	width: 70px;
+ 	height: 70px;
+ 	display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+	font-size: 18px;  
+}
+
+.dashboard .container .card .money {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.dashboard .container .card .shapes .numbers { 
+	padding-top: -10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.dashboard .container .card .shapes .secondary-style { 
+	padding-top: 0;
+}
+
+.dashboard .container .card .shapes .percentage { 
+	position: relative;
+	margin-top: 4px;
+	height: 4px;
+}
+
+.dashboard .container .card .shapes .percentage > span  { 
+ 	position: absolute;
+ 	height: 100%;
+ 	transition: 3s;
+}
+
+.dashboard .container .card .shapes .percentage > span span { 
+	position: absolute;
+	bottom: 16px;
+	right: -16px;
+	font-size: 12px;
+	border-radius: 3px;
+	padding: 3px 5px;
+	color: white;
+}
+
+.dashboard .container .card .shapes .percentage > span span::after {
+	content: "";
+   	position: absolute;	
+   	border-color: transparent;
+   	border-style: solid;
+   	border-width: 8px;
+   	left: 50%;
+   	bottom: -15px;
+   	transform: translateX(-50%);
+}
+
+.dashboard .container .card .shapes .percentage > .bg-main span::after { 
+	border-top-color: var(--color-main);
+}
+
+.dashboard .container .card .shapes .percentage > .bg-green span::after { 
+   	border-top-color: var(--color-green);
+}
+
+.dashboard .container .card .shapes .percentage > .bg-orange span::after { 
+   	border-top-color: var(--color-orange);
+}
+
+/* Start of Ticket Widget */
+.dashboard .container .card .ticket-shapes  {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 15px;
+	padding: 10px 20px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.dashboard .container .card .ticket-shapes > div { 
+		border: solid 2px var(--color-alt-bg);
+		border-radius: 6px;
+}
+
+.dashboard .container .card .ticket-shapes .icon {
+	font-size: 25px; 
+	margin-top: 15px;
+}
+
+.dashboard .container .card .ticket-shapes .number { 
+	margin-top: 7px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.dashboard .container .card .ticket-shapes .all-tickets .icon { 
+	color: var(--color-orange);
+}
+
+.dashboard .container .card .ticket-shapes .pending .icon { 
+ 	color: var(--color-main);
+}
+
+.dashboard .container .card .ticket-shapes .closed .icon { 
+	color: var(--color-green);
+}
+
+.dashboard .container .card .ticket-shapes .deleted .icon { 
+	color: var(--color-red);
+}
+/* End of Ticket Widget */
+
+/* Start of Latest News */
+.dashboard .container .card .latest-news .news { 
+	display: flex;
+	gap: 30px;
+	margin: 20px 10px;
+	position: relative;	
+}
+
+@media (max-width: 767px){
+ 	.dashboard .container .card .latest-news .news {
+ 		flex-direction: column;
+ 		align-items: center;
+ 		text-align: center;
+ 	}
+}
+
+.dashboard .container .card .latest-news .news:not(:last-child)::after {
+ 	content: "";
+ 	height: 2px;
+ 	width: 100%;
+	position: absolute;
+ 	background-color: var(--color-alt-bg);
+ 	bottom: -10px;
+}
+
+.dashboard .container .card .latest-news .news .image { 
+ 	margin-left: 20px;
+}
+
+.dashboard .container .card .latest-news .news .image img { 
+	width: 90px ;
+	height: 50px;
+	border-radius: 6px;
+}
+
+.dashboard .container .card .latest-news .news .title { 
+   	font-weight: bold;
+   	text-transform: capitalize;
+}
+
+.dashboard .container .card .latest-news .news .secondary-style {
+   	padding-top: 5px;
+   	text-transform: capitalize;
+}
+
+.dashboard .container .card .latest-news .news .added {
+   	text-transform: capitalize;
+   	font-size: 13px;
+   	flex: 1;
+   	right: 20px;
+   	position: absolute;
+   	text-align: center;
+   	top: 50%;
+   	transform: translateY(-50%);
+   	background-color: var(--color-alt-bg);
+   	padding: 5px 10px;
+   	border-radius: 6px;
+}
+
+@media (max-width: 767px){ 
+   	.dashboard .container .card .latest-news .news .added {
+   		position: relative;
+   		right: 0px;
+	}
+   	.dashboard .container .card .latest-news .news .image {
+   		margin-left: 0px;
+   	}
+}
+/* End of Latest News */
+
+/* Start of Latest Tasks */
+.dashboard .container .card .tasks { 
+	display: flex;
+	gap: 30px;
+	margin: 10px 20px;
+	position: relative;	
+}
+
+.dashboard .container .card .tasks .title {
+	font-weight: bold;
+}
+
+.dashboard .container .card .tasks .secondary-style { 
+	padding-top: 5px;
+}
+
+.dashboard .container .card .tasks  .delete-btn { 
+   	right: 20px;
+   	cursor: pointer;
+   	position: absolute;
+   	text-align: center;
+   	top: 50%;
+   	transform: translateY(-50%);
+   	color: var(--color-bg);
+   	transition: var(--transition-main);
+}
+
+.dashboard .container .card .tasks  .delete-btn:hover {
+  	color: var(--color-red);
+}
+
+.dashboard .container .card .deleted .title,
+.dashboard .container .card .deleted .secondary-style,
+.dashboard .container .card .deleted .delete-btn { 
+	text-decoration:line-through;
+	opacity: 0.4;
+}
+/* End of Latest Tasks */
+
+/* Start of Top Searched Items */
+.dashboard .container .card .top-search .keywords { 
+	padding: 10px 20px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;	
+}
+
+.dashboard .container .card .top-search .header{
+	color: var(--color-bg);
+	font-weight: 600;
+}
+
+.dashboard .container .card .top-search .keywords:not(.header) span:nth-child(2) {
+	font-size: 13px;
+   	background-color: var(--color-alt-bg);
+   	padding: 5px 10px;
+   	border-radius: 6px;
+}
+/* End of Top Searched Items */
+
+/* Start Latest Uploads */
+.dashboard .container .card .latest-uploads .files .file {
+	display: flex;
+	padding: 10px 20px;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.dashboard .container .card .latest-uploads .files .file:not(:last-child)::after {
+ 	content: "";
+ 	height: 1px;
+ 	width: 100%;
+ 	position: absolute;
+ 	background-color: var(--color-alt-bg);
+ 	bottom: -4px;
+} 
+
+.dashboard .container .card .latest-uploads .file .items { 
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.dashboard .container .card .latest-uploads .file .icon {
+	font-family: var(--font-awesome);
+	font-size: 27px;
+	width: 30px;
+	text-align: center;
+	font-weight: 900;
+}
+
+.dashboard .container .card .latest-uploads .file .icon.pdf::after {
+	content: "\f1c1";
+	color: var(--color-red);
+}
+
+.dashboard .container .card .latest-uploads .file .icon.powerpoint::after {
+	content: "\f1c4";
+	color: #C13B1B ;
+}
+
+.dashboard .container .card .latest-uploads .file .icon.word::after {
+	content: "\f1c2";
+	color: #1B5EBE ;
+}
+
+.dashboard .container .card .latest-uploads .file .icon.excel::after {
+	content: "\f1c3";
+	color: #1d6f42 ;
+}
+
+.dashboard .container .card .latest-uploads .file .icon.png::after {
+	content: "\f03e";
+	color: #28afea ;
+	font-size: 25px;
+}
+
+.dashboard .container .card .latest-uploads .file .icon.avi::after {
+	content: "\f1c8";
+	color: #84c3e8 ;
+}
+
+.dashboard .container .card .latest-uploads .file  .full-name {
+	font-size: 13px;
+}
+
+.dashboard .container .card .latest-uploads .file .full-name .author {
+	padding: 0px;
+}
+
+.dashboard .container .card .latest-uploads .file .size {
+	font-size: 12px;
+   	background-color: var(--color-alt-bg);
+   	padding: 5px 10px;
+   	border-radius: 6px;
+}
+/* End Latest Uploads */
+
+/* Start Last Project Progress */
+.dashboard .container .card .last-project .content {
+	margin: 20px 60px;
+	position: relative;
+}
+
+@media (max-width: 767px) {
+	.dashboard .container .card .last-project .content {
+		font-size: 14px;
+	}
+}
+
+.dashboard .container .card .last-project .content .process {
+	position: relative;
+	transition: var(--transition-main);
+}
+.dashboard .container .card .last-project .content .process:not(:last-child) {
+	padding-bottom: 30px;
+}
+
+.dashboard .container .card .last-project .process::after{
+	content: "";
+	width: 2px;
+	height: 100%;
+	position: absolute;
+	background-color: var(--color-main);
+	top: 0;
+	left: -30px;
+}
+
+.dashboard .container .card .last-project .content .process::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	border-radius: 50%;
+	outline: solid 2px var(--color-main);
+	border: solid 2px white;
+	left: -41px;
+	background-color: white ;
+	z-index: 1;
+}
+
+.dashboard .container .card .last-project .content .process.done::before {
+	background-color: var(--color-main) ;
+}
+
+.dashboard .container .card .last-project .content .process.current::before {
+	animation-name: pulse;
+	animation-iteration-count: infinite;
+	animation-duration: 0.8s;
+}
+/* End Last Project Progress */
+
+/* Start of the Reminders */
+.dashboard .container .card .reminders .content2 {
+	padding: 0px 10px 0px 80px;
+}
+
+.dashboard .container .card .reminders .content2 .remind {
+	position: relative;
+	margin-top: 20px;
+}
+
+.dashboard .container .card .reminders .content2 .remind .title	{
+	font-weight: 600;
+	font-size: 15px;
+}
+
+@media (max-width: 767px) { 
+	.dashboard .container .card .reminders .content2 .remind .title {
+		font-size: 14px;
+	}
+}
+
+.dashboard .container .card .reminders .content2 .remind .secondary-style {
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+}
+
+.dashboard .container .card .reminders .content2 .remind::before {
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	left: -30px;
+}
+
+.dashboard .container .card .reminders .content2 .remind::after {
+	content: "";
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: -60px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+}
+
+.dashboard .container .card .reminders .content2 .remind.rem-main::before,
+.dashboard .container .card .reminders .content2 .remind.rem-main::after {
+	background-color: var(--color-main);
+}
+
+.dashboard .container .card .reminders .content2 .remind.rem-green::before,
+.dashboard .container .card .reminders .content2 .remind.rem-green::after {
+	background-color: var(--color-green);
+}
+
+.dashboard .container .card .reminders .content2 .remind.rem-orange::before,
+.dashboard .container .card .reminders .content2 .remind.rem-orange::after {
+	background-color: var(--color-orange);
+}
+
+.dashboard .container .card .reminders .content2 .remind.rem-red::before,
+.dashboard .container .card .reminders .content2 .remind.rem-red::after {
+	background-color: var(--color-red);
+}
+/* End of the Reminders */
+
+/* Start of Latest Post */
+.dashboard .container .card .latest-post .content3 {
+	padding-left: 20px;
+}
+
+.dashboard .container .card .latest-post .content3 .poster {
+	display: flex;
+	gap: 0px;
+	align-items: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.dashboard .container .card .latest-post .content3 .poster .profile {
+	width: 60px;
+	height: 60px;
+	margin-right: 0px;
+}
+
+.dashboard .container .card .latest-post .content3 .poster .profile img {
+	width: 50px;
+}
+
+.dashboard .container .card .latest-post .content3 .poster .name .title {
+	font-weight: 600;
+}
+
+.dashboard .container .card .latest-post .content3 .poster .name .secondary-style {
+	font-size: 13px;
+	padding-top: 5px;
+}
+
+.dashboard .container .card .latest-post .content3 .post {
+	min-height: 150px;
+	padding: 20px 20px;
+	border-top: solid 2px var(--color-alt-bg);
+	border-bottom: solid 2px var(--color-alt-bg);
+	line-height: 2;
+	font-size: 15px;
+}
+
+.dashboard .container .card .latest-post .content3 .likes-comments {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 20px 5px 10px;
+	font-size: 14px;
+}
+
+.dashboard .container .card .latest-post .content3 .likes-comments .likes::before {
+	font-family: var(--font-awesome);
+	content: "\f004";
+	font-weight: bold;
+	padding-right: 5px ;
+	color: var(--color-red);
+}
+
+.dashboard .container .card .latest-post .content3 .likes-comments .comments::before {
+	font-family: var(--font-awesome);
+	content: "\f086";
+	font-weight: 600px;
+	padding-right: 5px ;
+}
+/* End of Latest Post */
+
+/* Start of Social Media Stats */
+.dashboard .container .card .social-media .content4 {
+	padding: 20px;
+}
+
+.dashboard .container .card .social-media .content4 .platform {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: 25px;
+	border-radius: 6px;
+}
+
+.dashboard .container .card .social-media .content4 .platform .logo  {
+	width: 60px;
+	height: 100%;
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	font-size: 23px;
+	color: white;	
+}
+
+.dashboard .container .card .social-media .content4 .platform .number {
+	padding-left: 70px;
+	flex: 1;
+	display: flex;
+	padding: auto;
+}
+
+.dashboard .container .card .social-media .content4 .button {
+	margin-top: 10px ;
+}
+
+.dashboard .container .card .social-media .content4 .platform.twiter {
+	color: #1da1f2;
+	background-color: #1da1f233;
+}
+
+.dashboard .container .card .social-media .content4 .platform.twiter .logo ,
+.dashboard .container .card .social-media .content4 .twiter .button {
+	background-color: #1da1f2;
+}
+
+.dashboard .container .card .social-media .content4 .platform.facebook {
+	color: #1877f2 ;
+	background-color: #1877f233 ;
+}
+
+.dashboard .container .card .social-media .content4 .platform.facebook .logo, 
+.dashboard .container .card .social-media .content4 .facebook .button {
+	background-color: #1877f2;
+}
+
+.dashboard .container .card .social-media .content4 .platform.youtube {
+	color: #ff0000 ;
+	background-color: #ff000033 ;
+}
+
+.dashboard .container .card .social-media .content4 .platform.youtube .logo, 
+.dashboard .container .card .social-media .content4 .youtube .button {
+	background-color: #ff0000;
+}
+
+.dashboard .container .card .social-media .content4 .platform.linkedin {
+	color: #0077b5 ;
+	background-color: #0077b533 ;
+}
+
+.dashboard .container .card .social-media .content4 .platform.linkedin .logo ,
+.dashboard .container .card .social-media .content4 .linkedin .button {
+	background-color: #0077b5;
+}
+/* End of Social Media Stats */
+
+/* Start of Projects */
+.projects {
+	margin: 15px 5px;
+	padding: 20px;
+	overflow-x: auto;
+}
+
+.projects h2 {
+	margin-left: -25px;
+	margin-top: -15px;
+	margin-bottom: 20px;
+}
+
+.projects table {
+	border-collapse: collapse;	
+	width: 100%;
+	min-width: 1000px;
+}
+
+@media (max-width: 767px){ 
+	.projects table {
+		min-width: 800px;
+	}
+}
+
+.projects table th {
+	background-color: var(--color-alt-bg);
+}
+
+.projects table tr {
+	transition: var(--transition-main);
+}
+
+.projects table tr:hover {
+	background-color: var(--color-alt-bg);
+}
+
+.projects table td , .projects table th {
+	padding: 10px;
+	border: 3px solid var(--color-alt-bg);
+}
+
+.projects table .status::before {
+	color: white;
+	padding: 3px 7px;
+	border-radius: 6px;
+	width: fit-content;
+	margin-right: auto;
+	font-size: 13px;
+}
+
+.projects table .status.completed::before {
+	content: "Completed";
+	background-color: var(--color-green);
+}
+
+.projects table .status.in-progress::before {
+	content: "In Progress";
+	background-color: var(--color-main);
+}
+
+.projects table .status.rejected::before {
+	content: "Rejected";
+	background-color: var(--color-red);
+}
+
+.projects table .status.pending::before {
+	content: "Pending";
+	background-color: var(--color-orange);
+}
+
+.projects table td:nth-child(6) {
+	text-align: center;
+}
+
+.projects table img {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+}
+
+.projects table img:not(:first-child) {
+	margin-left: -15px;
+}
+/* End of Projects */
+/*End Dashboard */
+
+/* Start Plans tab */
+.plans .card { 
+	padding:20px;
+}
+
+.plans .card .box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	width: 100%;
+	border: solid 2px white ;
+	outline: 20px;
+	min-height: 100px;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.plans .card .box.free {
+	background-color: var(--color-green);
+	outline: solid var(--color-green);
+}
+
+.plans .card .box.basic {
+	background-color: var(--color-main);
+	outline: solid  var(--color-main);
+}
+
+.plans .card .box.premium {
+	background-color: var(--color-orange);
+	outline: solid  var(--color-orange);
+}
+
+.plans .card .box .plan {
+	font-size: 20px;
+}
+
+.plans .card .box .price { 
+ 	margin-top: 10px;
+ 	font-size: 28px;
+ 	position: relative;
+ 	font-weight: 600;
+}
+
+.plans .card .box .price::before {
+ 	font-family: var(--font-awesome);
+ 	content: "\24";
+ 	position: absolute;
+ 	left: -15px;
+ 	top: 0px;
+ 	font-size: 16px;
+}
+
+.plans .card .features > div {
+	margin: 20px 20px 20px 30px;
+	padding: 10px;
+	position: relative;	
+}
+
+.plans .card .features > div {
+	border-bottom: 2px solid var(--color-alt-bg);	
+}
+
+.plans .card .features .check::before, 
+.plans .card .features .uncheck::before { 
+	font-family: var(--font-awesome);
+	font-weight: bold;
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+ .plans .card .features .check::before {
+ 	content: "\f00c";
+ 	color: var(--color-green);
+}
+
+.plans .card .features .uncheck::before {
+	content: "\f00d";
+ 	color: var(--color-red);
+ 	left: -19px;
+}
+
+.plans .card .features > div::after {
+	content: "\f05a";
+ 	color: var(--color-bg);
+ 	font-family: var(--font-awesome);
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0px;
+	cursor: pointer;
+}
+
+.plans .card.yourplan .button {
+	display: none;
+}
+
+.plans .card.yourplan:after {
+	content: "This is your current plan <3";
+	color: var(--color-bg);
+	display: flex;
+	justify-content: center;
+}
+
+.plans .card .box.free .button {
+	background-color: var(--color-green);
+}
+
+.plans .card .premium ~ .button {
+	background-color: var(--color-orange);
+}
+.plans .card .free~ .button {
+	background-color: var(--color-green);
+}
+/* End Plans tab */
+
+/* Start of Settings tab */
+.settings .container .card .box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.settings textarea,
+.settings input[type="text"]  {
+	background-color: transparent;
+	border: 1px solid var(--color-bg);
+	width: 100%;
+	font-size: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.settings input[name="email"]:disabled{
+	background-color: var(--color-bg2);
+	cursor: no-drop;
+	color: var(--color-bg);
+	width: calc(100% - 55px);
+	margin-right: 5px;
+}
+
+.settings .text-label {
+	margin-top: 10px;
+	font-size: 13px;
+	font-weight: 600;
+	display: block;
+}
+
+.settings .card.social-life i {
+	width: 40px;
+	height: 40px;
+	background-color: var(--color-alt-bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--color-bg);
+	border-radius: 6px 0px 0px 6px;
+	color: var(--color-bg);
+}
+
+.settings .card.social-life input {
+	height: 40px;
+	border-radius: 0px 6px 6px 0px;
+	border-left: none;
+	background-color: var(--color-alt-bg);
+}
+
+.settings .card-margins > div:focus-within i {
+	color:black;
+}
+/* End of Settings tab */
+
+
+/* Start of the Animations */
+@keyframes pulse {
+	From {background-color: white;}
+	to {background-color: var(--color-main)}
+/* End of the Animations */
+}
+

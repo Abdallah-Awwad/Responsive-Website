@@ -1,0 +1,108 @@
+/* Start Spacing */
+.p-20 {padding: 20px}
+.plr-20 { padding-left: 20px; padding-right: 20px}
+.pt-20 {padding-top: 20px}
+.pt-0 {padding-top: 0px}
+.ptb-20 {padding-top: 20px; padding-bottom: 20px}
+.mt-0 {margin-top: 0px;}
+.mb-0 {margin-bottom: 0px}
+.ml-0 {margin-left: 0px}
+.mt-5 {margin-top: 5px}
+.mt-10 {margin-top: 10px}
+.mb-10 {margin-bottom: 10px}
+.m-20 {margin: 20px;}
+.m-25 {margin: 25px;}
+.mb-20{margin-bottom: 20px}
+.ml-20{margin-left: 20px}
+.mr-20{margin-right: 20px}
+/* End Spacing */
+
+/* Start Positioning and displaying */
+.d-flex { display:flex}
+.pos-rel {position: relative;}
+.pos-abs {position: absolute;}
+.sp-around {justify-content: space-around}
+.sp-between {justify-content: space-between}
+.center-flex {display: flex; align-items: center; justify-content: center }
+.align-end {align-items: flex-end}
+.align-center {align-items: center}
+.min-height-150 {min-height: 150px}
+.wid-100 {width: 100%}
+/* End Positioning and displaying */
+
+/* Start Font Sizing */
+.fs-12 {font-size: 12px}
+.fs-13 {font-size: 13px}
+.fw-600 {font-weight: 600}
+.fw-b {font-weight: bold}
+.c-blue{color: var(--color-main);}
+
+.secondary-style {
+	font-size: 12px;
+	color: var(--color-bg);
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+/* End Font Sizing */
+
+/* Start Buttons and Labels */
+.button {
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+	padding: 5px 10px;
+	background-color: var(--color-main);
+	border-radius: 6px;
+	width: fit-content;
+	margin: 5px 20px 10px auto;
+	display: block;
+	text-align: right;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+label .toggle-checkbox {
+	appearance: none;
+	transition: 2s;				 /*	Transition NOT WORKING */
+}
+
+label .toggle-btn {
+	position: relative;
+	width: 80px;
+	height: 30px;
+	background-color: var(--color-main);
+	border-radius: 16px;
+	transition: var(--transition-main);
+	cursor: pointer;
+}
+
+.toggle-btn::before {
+	font-family: var(--font-awesome);
+	content: "\f00c";
+	font-weight: bold;
+	color: var(--color-main);
+	font-size: 14px;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	background-color: white;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: var(--transition-main);
+	right: 5px;
+}
+
+.toggle-checkbox:checked + .toggle-btn {
+	background-color: var(--color-bg);
+}
+
+.toggle-checkbox:checked + .toggle-btn::before {
+	content: "\f00d";
+	left: 5px;
+	color: var(--color-bg);
+}
+/* End Buttons and Labels */

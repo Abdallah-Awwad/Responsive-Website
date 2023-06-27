@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BlackMoon</title>
+
+	<!-- Fonts Awesome  -->
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+
+	<!-- Main CSS file -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/framework.css">
+	<link rel="icon" href="images/The+Blackmoon+Studio.png" type="image/x-icon">
+</head>
+<body>
+	<div class="full-screen">
+
+		<!-- Start Sidebar -->
+		<div class="sidebar">
+			<div class="logo">BlackMoon</div>
+			<a class="row" href="index.html">
+				<i class="fa-solid fa-table-columns"></i>
+				<span>Dashboard</span>
+			</a>					
+			<a class="row active" href="settings.html">
+				<i class="fa-solid fa-sliders"></i>
+				<span>Settings</span>
+			</a>
+			<a  class="row" href="profile.html">
+				<i class="fa-solid fa-user"></i>
+				<span>Profile</span>
+			</a>
+			<a  class="row" href="projects.html">
+				<i class="fa-solid fa-briefcase"></i>
+				<span>Projects</span>
+			</a>
+			<a  class="row" href="courses.html">
+				<i class="fa-solid fa-graduation-cap"></i>
+				<span>Courses</span>
+			</a>
+			<a  class="row" href="friends.html">
+				<i class="fa-solid fa-users-line"></i>
+				<span>Friends</span>
+			</a>
+			<a  class="row" href="files.html">
+				<i class="fa-sharp fa-solid fa-file"></i>
+				<span>Files</span>
+			</a>
+			<a  class="row" href="plans.html">
+				<i class="fa-regular fa-credit-card"></i>
+				<span>Plans</span>
+			</a>
+		</div>
+		<!-- End Sidebar -->
+
+		<!-- Start page Page -->
+
+		<div class="page">
+
+			<!-- Start Navigation bar -->
+			<div class="navbar">
+				<div class="search">
+					<input type="search" placeholder="Type a keyword">
+				</div>
+
+				<div class="right">
+					<i class="fa-regular fa-bell notification"></i>
+					
+					<div class="profile">
+						<img src="images/avatar001.png">
+					</div>
+
+				</div>			
+			</div>
+			<!-- End Navigation bar -->
+
+			<!-- Start Settings  -->		
+			<div class="settings m-25">
+				<h1>Settings</h1>
+				<!-- Start Container  -->		
+				<div class="container">
+					<div class="card">
+						<h2>Site Control</h2>
+						<div class="card-margins ml-20 mr-20">
+							<p class="secondary-style pt-0 mt-0">Control The website if there is a maintenance</p>
+							<div class="box">
+								<div>
+									<p class="mb-0 fs-13 fw-600">Website Control</p>
+									<p class="secondary-style mt-0">Open/Close Website and Type The Reason</p>
+								</div>
+								<label>
+									<input class="toggle-checkbox" type="checkbox">
+									<div class="toggle-btn"></div>
+								</label>
+							</div>
+							<textarea class="ml-0 min-height-150 mb-20" placeholder="Close Message Content"></textarea>
+						</div>
+					</div>
+					<div class="card">
+						<h2>General Info</h2>
+						<div class="card-margins ml-20 mr-20">
+							<p class="secondary-style pt-0 mt-0">General Information About Your Account</p>
+							<div class="mb-10">
+								<label class="text-label">First Name</label>
+								<input type="text" name="first-name" placeholder="First Name">	
+							</div>
+							<div class="mb-10">
+								<label class="text-label">Last Name</label>
+								<input type="text" name="last-name" placeholder="Last Name">	
+							</div>
+							<div class="mb-10">
+								<label class="text-label">Email</label>
+								<input type="text" name="email" value="abdallahhawwad@gmail.com" disabled>	
+								<a class="c-blue fs-12" href="#">Change</a>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<h2>Security Info</h2>
+						<div class="card-margins ml-20 mr-20">
+							<p class="secondary-style pt-0 mt-0">Security Information About Your Account</p>
+							<div class="mb-10 d-flex align-center sp-between">
+								<div>
+									<p class="mb-0 fs-13 fw-600">Password</p>
+									<p class="secondary-style mt-0">Last Change On 25/10/2022</p>
+								</div>
+								<a class="c-blue fs-12" href="#">Change</a>
+							</div>
+							<div class="mb-10 d-flex align-center sp-between">
+								<div>
+									<p class="mb-0 fs-13 fw-600">Two-Factor Authentication </p>
+									<p class="secondary-style mt-0">Enable/Disable The Feature</p>
+								</div>
+								<label class="center-flex">
+									<input class="toggle-checkbox" type="checkbox">
+									<div class="toggle-btn"></div>
+								</label>
+							</div>
+							<div class="mb-10 d-flex align-center sp-between">
+								<div>
+									<p class="mb-0 fs-13 fw-600">Devices </p>
+									<p class="secondary-style mt-0">Check The Login Devices List</p>
+								</div>
+								<a class="c-blue fs-12" href="#">Change</a>
+							</div>
+						</div>
+					</div>
+					<div class="card social-life">
+						<h2>Social Info</h2>
+						<div class="card-margins ml-20 mr-20">
+							<p class="secondary-style pt-0 mt-0">Social Media Information</p>
+							<div class="social-box center-flex mb-10">
+								<i class="fa-brands fa-twitter"></i>
+								<input type="text" name="twitter-username" placeholder="Twitter Username">	
+							</div>
+							<div class="social-box center-flex mb-10">
+								<i class="fa-brands fa-facebook"></i>
+								<input type="text" name="facebook-username" placeholder="Facebook Username">	
+							</div>							
+							<div class="social-box center-flex mb-10">
+								<i class="fa-brands fa-linkedin"></i>
+								<input type="text" name="linkedin-username" placeholder="Linkedin Username">	
+							</div>								
+							<div class="social-box center-flex">
+								<i class="fa-brands fa-youtube"></i>
+								<input type="text" name="youtube-username" placeholder="Youtube Username">	
+							</div>															
+							
+						</div>
+					</div>
+
+				</div>
+				<!-- End Container  -->		
+				
+
+			</div>
+			<!-- End Settings  -->		
+
+
+
+
+				
+
+		</div>
+		<!-- End Page  -->
+	</div>
+
+</body>
+</html>
